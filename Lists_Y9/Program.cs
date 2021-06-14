@@ -12,9 +12,7 @@ namespace Lists_Y9
         {
             List<string> myShoppingList = new List<string>();
             string userItem = "";
-            //Comment
-
-            // ccc
+            
 
             do
             {
