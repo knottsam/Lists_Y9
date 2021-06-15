@@ -29,6 +29,9 @@ namespace Lists_Y9
             string itemToRemove = "";
             string more = "yes";
 
+            //We need to find an item in the list:
+
+
             do
             {
                 Console.Write("Which item to remove: ");
