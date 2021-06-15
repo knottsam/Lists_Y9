@@ -30,7 +30,22 @@ namespace Lists_Y9
             string more = "yes";
 
             //We need to find an item in the list:
+            int itemPosition = myShoppingList.IndexOf("Bread");
+            Console.WriteLine("Bread is at position {0} in the list.", itemPosition);
 
+            //We need to find what is at a certain position in the list:
+            string item = myShoppingList[6];
+            Console.WriteLine("The item at position {0} is: {1}.", 6, item);
+
+            //We want to insert an item into the list:
+            string newItem = "Cauliflower";
+            myShoppingList.Insert(4, newItem);
+
+            PrintList(myShoppingList);
+
+            //We want to amend an item in the list:
+            newItem = "Broccoli";
+            myShoppingList[4] = newItem;
 
             do
             {
