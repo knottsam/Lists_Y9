@@ -12,7 +12,6 @@ namespace Lists_Y9
         {
             List<string> myShoppingList = new List<string>();
             string userItem = "";
-            
 
             do
             {
@@ -25,25 +24,33 @@ namespace Lists_Y9
                 }
             } while (userItem != "end");
 
-            Console.WriteLine("Your list:");
-
-            foreach (string item in myShoppingList)
-            {
-                Console.WriteLine(item);
-            }
+            PrintList(myShoppingList);
 
             string itemToRemove = "";
-            Console.Write("Which item to remove: ");
-            itemToRemove = Console.ReadLine();
-            myShoppingList.Remove(itemToRemove);
+            string more = "yes";
 
+            do
+            {
+                Console.Write("Which item to remove: ");
+                itemToRemove = Console.ReadLine();
+                myShoppingList.Remove(itemToRemove);
+
+                Console.WriteLine("Any more to remove?");
+                more = Console.ReadLine();
+            } while (more.ToLower() == "yes");
+
+            PrintList(myShoppingList);
+
+            Console.ReadLine();
+        }
+
+        public static void PrintList(List<string> inList)
+        {
             Console.WriteLine("Your list:");
-            foreach (string item in myShoppingList)
+            foreach (string item in inList)
             {
                 Console.WriteLine(item);
             }
-
-            Console.ReadLine();
         }
     }
 }
