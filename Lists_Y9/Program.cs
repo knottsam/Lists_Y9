@@ -10,47 +10,14 @@ namespace Lists_Y9
     {
         static void Main(string[] args)
         {
-            List<string> myShoppingList = new List<string>();
-            string userItem = "";
+            //Create a list of strings (a shopping list):
 
-            do
-            {
-                Console.Write("Enter item: ");
-                userItem = Console.ReadLine();
+            //Add some items to the list (Bread, Milk, Butter)
 
-                if (userItem != "end")
-                {
-                    myShoppingList.Add(userItem);
-                }
-            } while (userItem != "end");
+            //Remove Butter from the list
 
-            PrintList(myShoppingList);
-
-            string itemToRemove = "";
-            string more = "yes";
-
-            do
-            {
-                Console.Write("Which item to remove: ");
-                itemToRemove = Console.ReadLine();
-                myShoppingList.Remove(itemToRemove);
-
-                Console.WriteLine("Any more to remove?");
-                more = Console.ReadLine();
-            } while (more.ToLower() == "yes");
-
-            PrintList(myShoppingList);
 
             Console.ReadLine();
-        }
-
-        public static void PrintList(List<string> inList)
-        {
-            Console.WriteLine("Your list:");
-            foreach (string item in inList)
-            {
-                Console.WriteLine(item);
-            }
         }
     }
 }
